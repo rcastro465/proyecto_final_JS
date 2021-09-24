@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="multimedia/favicon-32x32.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <!--tipo de fuente-->
+
+    <title>The Chilean Burguer</title>
+</head>
+
+<body>
+    <header>
+        <!--menu principal-->
+        <nav class="contenedor">
+
+            <div class="logo">
+                <img src="multimedia/12105995_896986323725900_2681271618348409823_n.png" alt="">
+            </div>
+            <div class="enlaces">
+                <a href="#">INICIO</a>
+                <a href="#">MENÚ</a>
+                <a href="#">SUCURSALES</a>
+                <a href="#">QUIENES SOMOS</a>
+                <a href="#">CONTACTO</a>
+                <a class="cta" href="#">ENTRAR <img class="user-icon" src="multimedia/user-pin-regular-48.png"></a>
+                <a class="cta" href="#"><img class="carro-icon" src="multimedia/cart-regular-48.png"></a>
+            </div>
+
+            <div class="hamburguesa">
+                <img src="multimedia/menu-alt-right-regular-48.png" alt="" id="hamburguesa">
+            </div>
+
+        </nav>
+        <!-- fin menu principal-->
+    </header>
+
+
+    <div class="loading-overlay-hide" id="loading-overlay"></div>
+    <div class="loading-message-hide" id="loading-message">Estamos generando su compra , por favor espere...<img class="img-loading" src="multimedia/200.gif"></div>
+
+    <!--inicio del contenedor-->
+    <div class="container">
+        <div class="products-section">
+
+            <div class="productos">
+                <div class="prueba">
+                    <div class="productos-seccion"><img src="multimedia/camarona2.png" class="img-menus">
+                        <p class="product-title" id="product1">Camarona</p>
+                        <p class="price">$5990</p>
+                        <div class="stock">
+                            <p id="stock1">5</p>
+                            <p>unidades disponibles</p>
+                        </div>
+                        <button class="btn-compra" id="btn-compra1">Añadir a compra</button>
+                        <label class="lblAddUnits">Tiene <p class="units" id="unityp1">0</p> unidades en el carro de compras</label>
+                    </div>
+                    <div class="productos-seccion"><img src="multimedia/cebollas.png" class="img-menus">
+                        <p class="product-title" id="product2">Onion Burguer</p>
+                        <p class="price">$5990</p>
+                        <div class="stock">
+                            <p id="stock2">5</p>
+                            <p>unidades disponibles</p>
+                        </div>
+                        <button class="btn-compra">Añadir a compra</button>
+                        <label class="lblAddUnits">Tiene <p class="units" id="unityp2">0</p> unidades en el carro de compras</label>
+                    </div>
+                    <div class="productos-seccion"><img src="multimedia/champinon.jpeg" class="img-menus">
+                        <p class="product-title" id="product3">La champiñona</p>
+                        <p class="price">$5990</p>
+                        <div class="stock">
+                            <p id="stock3">5</p>
+                            <p>unidades disponibles</p>
+                        </div>
+                        <button class="btn-compra">Añadir a compra</button>
+                        <label class="lblAddUnits">Tiene <p class="units" id="unityp3">0</p> unidades en el carro de compras</label>
+                    </div>
+
+                </div>
+
+                <div class="prueba3"><br> </div>
+
+                <div class="prueba2">
+                    <div class="productos-seccion"><img src="multimedia/marytierra.png" class="img-menus">
+                        <p class="product-title" id="product4">Mar y Tierra</p>
+                        <p class="price">$5990</p>
+                        <div class="stock">
+                            <p id="stock4">5</p>
+                            <p>unidades disponibles</p>
+                        </div>
+                        <button class="btn-compra">Añadir a compra</button>
+                        <label class="lblAddUnits">Tiene <p class="units" id="unityp4">0</p> unidades en el carro de compras</label>
+                    </div>
+                    <div class="productos-seccion"><img src="multimedia/mexicana.png" class="img-menus">
+                        <p class="product-title" id="product5">La Mexicana</p>
+                        <p class="price">$5990</p>
+                        <div class="stock">
+                            <p id="stock5">5</p>
+                            <p>unidades disponibles</p>
+                        </div>
+                        <button class="btn-compra">Añadir a compra</button>
+                        <label class="lblAddUnits">Tiene <p class="units" id="unityp5">0</p> unidades en el carro de compras</label>
+                    </div>
+                    <div class="productos-seccion"><img src="multimedia/veggie1.png" class="img-menus">
+                        <p class="product-title" id="product6">Hamburguesa de Lentejas</p>
+                        <p class="price">$5990</p>
+                        <div class="stock">
+                            <p id="stock6">5</p>
+                            <p>unidades disponibles</p>
+                        </div>
+                        <button class="btn-compra">Añadir a compra</button>
+                        <label class="lblAddUnits">Tiene <p class="units" id="unityp6">0</p> unidades en el carro de compras</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="carr">
+            <div class="formLogin" id="formLogin">
+                <form name="form" action="#">
+                    <div class="LoginModal" id="loginModals">
+                        <p>Inicia sesión</p>
+                        <input type="text" name="login" placeholder="12345"><br>
+                        <input type="password" name="password" placeholder="12345"><br>
+
+
+                        <input onclick="ValidateLogin()" type="button" class="logIn" value="Iniciar sesion">
+                    </div>
+                    <div class="UserLogin" id="UserLogin"><label>Bienvenido: </label> <label>Eduardo Bacon</label><br>
+                        <input type="button" onclick="Logout()" class="logIn" value="Cerrar sesión">
+                    </div>
+
+                    <p>Mi Pedido</p>
+                </form>
+            </div>
+            <!-- <div>
+         <img  src="multimedia/mexicana.png" class="carr-image">
+         <div>
+
+         </div>
+         <p>Nombre de producto</p>
+         <p>precio</p>
+         <p>2 unidades</p>
+         
+
+         </div>-->
+            <div class="totals">
+                <p>Total</p>
+                <p class="shopCartTotal" id="shopCartTotal">0</p>
+            </div>
+            <div class="shipping">
+                <p>Envio</p>
+                <p class="shippingCart" id="shippingCart">0</p>
+            </div>
+
+            <div class="quantity">
+                <p>Cantidad</p>
+                <p class="quantityCart" id="quantityCart">0</p><img class="basket" src="multimedia/cesta.png">
+            </div>
+
+            <div class="shipping">
+                <p>Total a Comprar</p>
+                <p class="shippingTotals" id="shippingTotals">0</p>
+            </div>
+            <div id="containerProducts" class="nothing">
+                <button type="button" class="btnComprarVisible" id="btnComprarId" onclick="toBuy()">Realizar Compra</button>
+                <div><button type="button" class="deleteAll" id="deleteAll" onclick="resetItem()">Resetear Valores</button></div>
+
+
+
+            </div>
+
+
+        </div>
+        <!--fin del contenedor-->
+    </div>
+
+    <!--inicio footer-->
+    <footer>
+        <div class="container_footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="multimedia/logo.png" alt="">
+                </div>
+                <div class="terms">
+                    Somos una pyme familiar dedicada al rubro de la venta de comida rápida gourmet donde buscamos entregarles a nuestros clientes una experiencia en sabores inigualable.
+                </div>
+            </div>
+
+            <div class="box__footer">
+                <h2>Encuentranos en</h2>
+                <a class="delivery-link" href="#"><img class="delivery" src="multimedia/rappi-logo.png"></a>
+                <a class="delivery-link" href="#"><img class="delivery" src="multimedia/pedidosya.png"></a>
+                <a class="delivery-link" href="#"><img class="delivery" src="multimedia/uber.png"></a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Contactanos</h2>
+                <a href="https://www.google.com/maps/place/Las+Urbinas+53,+Providencia,+Regi%C3%B3n+Metropolitana/@-33.4221174,-70.6140793,17z/data=!3m1!4b1!4m5!3m4!1s0x9662cf666838327f:0x8c87dd4bbc19a485!8m2!3d-33.4221174!4d-70.6118906" target="_blank">las Urbinas 53, Providencia, RM</a>
+                <a href="mailto:rodrigocc60@email.com">rodrigocc60@gmail.com</a>
+                <a href="https://api.whatsapp.com/send/?phone=56988792181&text&app_absent=0">+56988792181</a>
+                <a href="contacto.html" target="_blank">Contacto</a>
+            </div>
+
+
+            <div class="box__footer">
+                <h2>Redes Sociales</h2>
+                <a href="https://facebook.com/"><i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 <b>The Chilean Burguer</b></p>
+        </div>
+
+
+    </footer>
+    <!--fin footer-->
+
+    <script src="javascript/funciones.js"></script>
+</body>
+
+</html>
